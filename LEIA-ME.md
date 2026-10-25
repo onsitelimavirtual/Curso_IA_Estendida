@@ -1,6 +1,6 @@
-# Inteligência Artificial Estendida — V5.3 consolidada
+# Inteligência Artificial Estendida — V5.4 consolidada
 
-**Versão única vigente deste pacote: V5.3** — revisão de 24/10/2026. Autoria © Nailson Rodrigues de Lima.
+**Versão única vigente deste pacote: V5.4** — revisão de 24/10/2026. Autoria © Nailson Rodrigues de Lima.
 
 ## Publicação
 
@@ -21,7 +21,7 @@ Página oficial: https://onsitelimavirtual.github.io/Curso_IA_Estendida/profissi
 - Nenhuma tela pública recebe credenciais Supabase: apenas chaves publicáveis no frontend.
 
 ### Arquivos centrais
-- `index.html`: entrada da V5.3 e acesso aos dois ambientes.
+- `index.html`: entrada da V5.4 e acesso aos dois ambientes.
 - `profissional.html`: 8 módulos, 24 aulas, tutor, avaliações e OAuth.
 - `kids.html`: ambiente Kids independente, local.
 - `apostila-aplicativo.html`: apostila interativa (14 etapas).
@@ -43,4 +43,8 @@ No Supabase Authentication → URL Configuration, o responsável do projeto deve
 - A emissão do certificado não é automática: requer instituição emissora habilitada, avaliação e evidências de carga horária. Não é diploma MEC nem chancela da OpenAI.
 - Testes locais não substituem a validação real da publicação, da autenticação e de permissões entre contas.
 
-Consulte `QA-V5.3.md` para verificações executadas e limitações.
+Consulte `QA-V5.4.md` para verificações executadas e limitações.
+
+
+## V5.4 — Correção de progresso
+Veja `LEIA-ME-V5.4-PROGRESSO.md` e `QA-V5.4-RESULTADOS.md`. A plataforma mantém notas e redações, mas só marca ✓ quando ambas as exigências estão cumpridas. O sistema reconcilia os registros ao entrar e preserva a distinção entre conclusão demonstrativa e certificação institucional.

@@ -1,6 +1,6 @@
-# Inteligência Artificial Estendida — V5.3
+# Inteligência Artificial Estendida — V5.4
 
-**Versão vigente:** V5.3 consolidada.
+**Versão vigente:** V5.4 consolidada.
 
 Documentação oficial: [LEIA-ME.md](LEIA-ME.md).
 
