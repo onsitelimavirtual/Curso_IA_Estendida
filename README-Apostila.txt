@@ -1,1 +1,0 @@
-Inteligência Artificial Estendida: Apostila original em HTML com 14 etapas. Abrir apostila-aplicativo.html e laboratorio-virtual.html na mesma pasta. As marcações são locais e não alteram progresso oficial. © Nailson Lima.
