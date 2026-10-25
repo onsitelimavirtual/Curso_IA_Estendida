@@ -1,54 +1,38 @@
-# Inteligência Artificial Estendida — V5.5 Final QR (base V5.4)
+# Inteligência Artificial Estendida — V5.6 Premium (rodapé corrigido)
 
-**Versão única vigente deste pacote: V5.5** — revisão de 24/10/2026. Autoria © Nailson Rodrigues de Lima.
+**Versão publicada por este pacote: V5.6.** Autoria: Nailson Rodrigues de Lima. © 2026 Nailson Lima.
+
+## Atualização pontual
+- O título e o rodapé de `index.html` agora identificam V5.6.
+- O título e o rodapé de `profissional.html` agora identificam V5.6.
+- O endereço interno de entrada foi atualizado para `profissional.html?v=5.6`, para facilitar a atualização de cache.
+- Foram excluídos somente uma prévia HTML obsoleta da V5.5 e um arquivo de QA temporário; o certificado dinâmico, o modelo premium, seus recursos e a verificação oficial permanecem intactos.
+- Não houve alteração no Supabase, nos dados dos alunos, nas permissões, no Google OAuth ou nos critérios de certificação.
 
 ## Publicação
 
-Publique os arquivos deste diretório **na raiz da branch configurada em GitHub Pages** do repositório `onsitelimavirtual/Curso_IA_Estendida`, preservando os nomes. Faça backup antes da substituição e não combine arquivos de diferentes pacotes.
-
+Repositório: `onsitelimavirtual/Curso_IA_Estendida`.
 Página oficial: https://onsitelimavirtual.github.io/Curso_IA_Estendida/profissional.html
 
-### Integrações existentes (preservadas)
-- Supabase `piagfpnjiwpngbikkkfp`: URL e **chave pública publishable** configuradas no HTML profissional. Nunca publique `service_role`, `sb_secret` ou segredos Google no GitHub.
-- Google OAuth: o provedor e o Client Secret permanecem no Supabase. O código redireciona somente para o endereço oficial acima.
-- Banco: progresso por conta, solicitações de certificado, administração restrita a `is_course_admin()` e verificação de certificado. Nenhuma migração SQL nesta atualização.
-- Write and Back: motor local incorporado no arquivo `write-and-back-lab.html`, sujeito aos termos próprios da ferramenta.
+**Correção mínima:** substitua `index.html` e `profissional.html` na branch atualmente publicada pelo GitHub Pages.
 
-### Acesso do aluno e administrador
-- **Visitante / aluno não autenticado:** `Entrar / cadastrar` e `Entrar com Google`, sem botão Configurar nem Administração.
-- **Aluno autenticado comum:** módulos, progresso, certificado sujeito à aprovação. Sem configuração de chaves ou Administração.
-- **Administrador autenticado:** a função `is_course_admin()` deve retornar booleano `true` para mostrar as opções Administração na parte superior e no menu de estudo. A autorização efetiva das operações também deve ocorrer no servidor.
-- Nenhuma tela pública recebe credenciais Supabase: apenas chaves publicáveis no frontend.
+**Atualização completa:** extraia e publique os arquivos do ZIP na mesma pasta da versão V5.6, preservando seus nomes. Faça backup antes de substituir. O arquivo `qr-local.js` e o CSS `certificado-premium.css` devem ficar ao lado de `profissional.html`, assim como `verificar-certificado.html`.
 
-### Arquivos centrais
-- `index.html`: entrada da V5.5 e acesso aos dois ambientes.
-- `profissional.html`: 8 módulos, 24 aulas, tutor, avaliações e OAuth.
-- `kids.html`: ambiente Kids independente, local.
-- `apostila-aplicativo.html`: apostila interativa (14 etapas).
-- `Apostila_Pratica_IA_Estendida_14_Etapas.pdf`: material de apoio.
-- `laboratorio-virtual.html`, `write-and-back-lab.html` e `exemplo-gestor-servicos.html`: laboratório, ferramenta autoral e exemplo.
-- `certificado-premium-modelo.html`: prévia do certificado sem valor probatório; `verificar-certificado.html`: consulta de autenticidade; `decoracao-certificado-*.svg`: ilustrações originais.
+**Se uma versão anterior persistir:** atualize a página, experimente uma aba anônima e confira se você está acessando o endereço oficial e a branch correta. Publicar arquivos não remove automaticamente arquivos legados do repositório.
 
-### Remoção de arquivos antigos no repositório
-Ao atualizar o GitHub Pages, **exclua ou arquive na branch pública** os antigos manuais, pois simplesmente enviar o ZIP não remove arquivos que já existem no repositório:
-`LEIA-ME-3.7.md`, `QA-3.7.md`, `LEIA-ME-5.1-DOMINIO-OFICIAL.md`, `LEIA-ME-V5-PREMIUM.md`, `LEIA-ME-V5.2-ACESSO-AUTOMATICO.md`, `QA-V5-RESULTADOS.md`, `QA-V5.2-ACESSO-AUTOMATICO.md`, `QA-CORRECAO.md`, `QA-RODAPE.md`, `QA.md`.
+## Recursos preservados
+- Curso profissional com oito módulos e 24 aulas; atividades, avaliações, indicadores e progresso por conta.
+- Autenticação com Google e Supabase utilizando exclusivamente chave pública no navegador.
+- Laboratório Virtual Inteligente, Write and Back autoral e apostila integrada.
+- Certificado premium, A4 horizontal, código dinâmico, QR Code local e consulta na página de verificação.
+- Administração acessível somente depois da autenticação e da autorização pelo Supabase.
 
-Se a publicação exibir os botões antigos, teste em aba anônima e faça uma atualização forçada do navegador; a entrada do `index.html` agora utiliza `profissional.html?v=5.5`. **Não apague** `index.html`, `profissional.html`, os demais HTML da versão nova ou dados do Supabase.
+## Certificação
+A emissão depende de aprovação administrativa, validação da oferta e habilitação do emissor. O QR Code verifica um registro da plataforma; não é assinatura eletrônica governamental, e não há chancela da OpenAI ou reconhecimento individual pelo MEC.
 
-### Configuração externa obrigatória
-No Supabase Authentication → URL Configuration, o responsável do projeto deve manter URL de retorno oficial, preservar URLs ainda utilizadas por outros aplicativos e revisar qualquer dependência do domínio desativado. A atualização do HTML **não modifica configurações administrativas** do Supabase.
+## Relatórios e histórico
+- `QA-V5.6.md`: testes executados e pendências da versão do certificado.
+- `LEIA-ME-CERTIFICADO-V5.6.md`: integração do certificado.
+- `LEIA-ME-V5.4-PROGRESSO.md`: documentação histórica da lógica de progresso mantida na V5.6.
 
-### Limites
-- E-mail/senha ainda depende de serviço de entrega de mensagens/limites do Supabase. Login Google não depende do SMTP da Brevo.
-- A emissão do certificado não é automática: requer instituição emissora habilitada, avaliação e evidências de carga horária. Não é diploma MEC nem chancela da OpenAI.
-- Testes locais não substituem a validação real da publicação, da autenticação e de permissões entre contas.
-
-Consulte `QA-V5.4.md` para verificações executadas e limitações.
-
-
-## V5.4 — Correção de progresso
-Veja `LEIA-ME-V5.4-PROGRESSO.md` e `QA-V5.4-RESULTADOS.md`. A plataforma mantém notas e redações, mas só marca ✓ quando ambas as exigências estão cumpridas. O sistema reconcilia os registros ao entrar e preserva a distinção entre conclusão demonstrativa e certificação institucional.
-
-
-## V5.5 — Certificado com código verificável
-Acesse `LEIA-ME-V5.5-CERTIFICADO.md`. Não publique imagem de assinatura manuscrita; assinatura eletrônica gov.br não foi implementada.
+**Ainda é necessário testar em produção:** login Google, permissões de contas distintas, impressão no Android e leitura do QR Code em certificado realmente emitido.
