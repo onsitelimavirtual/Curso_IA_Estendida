@@ -1,1 +1,0 @@
-Biblioteca de geração QR incorporada para funcionamento offline. Código original **QRCode for JavaScript** de Kazuhiko Arase, (c) 2009, licença MIT, http://www.d-project.com/. A implementação foi adaptada para este curso; sem serviços externos de QR. Verifique os avisos de copyright originais no arquivo qr-local.js.
