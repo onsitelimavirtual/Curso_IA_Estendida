@@ -1,25 +1,29 @@
-# Inteligência Artificial Estendida — V5.7 (HTML + certificado fiel ao modelo aprovado)
+# IA Estendida — V5.10 Cadastro ajustado
 
-## Como publicar
+## Conteúdo
+- `profissional.html`: arquivo principal com ajuste no tratamento da resposta do cadastro Supabase.
 
-Extraia o ZIP e envie **todos os arquivos da pasta raiz** para a branch publicada do repositório GitHub Pages do curso. Os arquivos `profissional.html`, `certificado-padrao.js`, `certificado-arte-premium.png` e `qr-local.js` devem permanecer **juntos, na mesma pasta**. Não envie apenas `profissional.html`, pois isso impediria o certificado de ser montado.
+## Ajustes
+- Aceita resposta de autenticação com sessão em `data.session` ou diretamente em `data`.
+- Quando recebe `access_token` e `user`, salva a sessão e inicia o carregamento do curso.
+- Se a conta foi criada, mas a carga dos dados do curso falhar, informa a situação sem apagar a sessão válida.
+- Quando não há sessão, não afirma que o aluno já está conectado; informa que a confirmação pode ser necessária conforme a configuração do Supabase.
+- Preserva o envio de `full_name`, PKCE, login Google, recuperação e reenvio de confirmação, controle de licença, progresso e certificação.
 
-A página de acesso permanece em `https://onsitelimavirtual.github.io/Curso_IA_Estendida/profissional.html`. Esta versão não depende de `painel.limavirtual.online`.
+## Publicação
+1. Faça backup do `profissional.html` atualmente publicado.
+2. Substitua somente `profissional.html` pela versão deste pacote na branch do GitHub Pages.
+3. Não altere a configuração global de autenticação do Supabase nesta etapa.
+4. Não publique nem compartilhe senhas, `service_role`, `sb_secret` ou API keys privadas.
 
-## Alterações no certificado
+## Validação realizada
+- Sintaxe JavaScript validada localmente com Node.js.
+- O teste de sintaxe não substitui testes reais no Supabase.
 
-- Usa a arte azul-marinho/dourado aprovada como base, com nome do aluno, data, emissor, responsável, código e QR Code inseridos dinamicamente a partir do registro real.
-- Emissão permanece sob a autorização do Supabase; a mudança não cria/edita certificados no banco.
-- Impressão ou salvamento em PDF: **A4 paisagem, uma única página**. Para minimizar cortes no Chrome Android, a impressão usa uma imagem única na proporção correta de A4.
-- QR Code gerado no navegador (offline, sem fornecedor pago) aponta ao `verificar-certificado.html?codigo=<código-emitido>`.
-- Exibe "Lima Virtual Cursos" como emissor e "Nailson Rodrigues de Lima" como responsável, sem assinatura digital ou chancela governamental.
-- Documento só é montado com dados de emissão completos e carga horária igual a 80 horas.
-
-## Limites importantes
-
-- Uma imagem isolada não confirma autenticidade: somente o **registro no Supabase** pode validar um código de certificado.
-- Não confundir `certificado-premium-modelo.html` e `certificado-modelo-previa-sem-validade.jpg` com um certificado real: ambos são ilustrativos, marcados como **sem validade**.
-- A implementação foi testada com dados fictícios em navegador e PDF local. Ainda exige validação com um certificado efetivamente emitido após publicar no GitHub Pages e em aparelhos Android dos alunos.
-- Os campos textuais fixos da arte aprovada (nome do curso, matriz resumida, descrição do percurso de 80h e nota de curso livre) não devem ser reaproveitados para cursos de outra duração sem adaptar a arte e o código.
-
-© 2026 Nailson Rodrigues de Lima.
+## Testes necessários
+1. Cadastro com e-mail de teste ainda não registrado, com confirmação desligada: deve receber sessão e entrar.
+2. Cadastro com confirmação ligada: deve informar que precisa confirmar o e-mail.
+3. Login por e-mail e senha.
+4. Login Google.
+5. Recuperação de senha e retorno ao mesmo endereço oficial.
+6. Verificar se o acesso/licença, progresso e certificação continuam respeitando as regras do banco.
